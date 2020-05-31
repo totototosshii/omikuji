@@ -1,0 +1,153 @@
+// トップページスタイル
+#overlay {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.6);
+  z-index: 100;
+  user-select: none;
+  #img-wrapper {
+    display: block;
+    margin: 15% auto;
+  }
+}
+
+.hidden {
+  display: none;
+}
+
+.rotate {
+  animation: rotate_anime 2.1s;
+  @keyframes rotate_anime {
+    0% {
+      transform: rotate(0deg);
+    }
+    50% {
+      transform: rotate(15deg);
+    }
+    100% {
+      transform: rotate(-15deg);
+    }
+  }
+}
+
+.top-img {
+  text-align: center;
+}
+
+.tracking-in-expand {
+  color: #3a68ad;
+  font-weight: bold;
+  text-align: center;
+  margin: 50px auto;
+  padding: 20px 0;
+  -webkit-animation: tracking-in-expand 1.5s cubic-bezier(0.215, 0.610, 0.355, 1.000) both;
+  animation: tracking-in-expand 1.5s cubic-bezier(0.215, 0.610, 0.355, 1.000) both;
+  @-webkit-keyframes tracking-in-expand {
+    0% {
+      letter-spacing: -0.5em;
+      opacity: 0;
+    }
+    40% {
+      opacity: 0.6;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+  @keyframes tracking-in-expand {
+    0% {
+      letter-spacing: -0.5em;
+      opacity: 0;
+    }
+    40% {
+      opacity: 0.6;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+}
+
+.btn-wrapper {
+  text-align: center;
+  margin: 60px 0;
+  #draw-btn {
+    min-width: 100px;
+    height: auto;
+    background-color: rgb(179, 151, 243);
+    border-radius: 10px;
+    line-height: 1.6;
+    color: #fff;
+    font-weight: bold;
+    cursor: pointer;
+    user-select: none;
+    }
+  .draw-btn {
+    -webkit-animation: anime08_pulse 2.5s infinite;
+    animation: anime08_pulse 2.5s infinite;
+    -webkit-box-shadow: 0 0 0 0 rgba(233,30,99 ,0.5);
+    box-shadow: 0 0;
+    &:hover {
+      -webkit-animation-play-state: paused;
+      animation-play-state: paused;
+    }
+    @-webkit-keyframes anime08_pulse {
+    0%   {
+      -webkit-transform: scale(0.8);
+      transform: scale(0.8);
+      }
+    70%  {
+      -webkit-transform: scale(1);
+      transform: scale(1);
+      -webkit-box-shadow: 0 0 0 50px rgba(233,30,99, 0);
+      box-shadow: 0 0 0 50px rgba(233,30,99, 0);
+      }
+    100% {
+      -webkit-transform: scale(0.8);
+      transform: scale(0.8);
+      -webkit-box-shadow: 0 0 0 0 rgba(233,30,99, 0);
+      box-shadow: 0 0 0 0 rgba(233,30,99, 0);
+      }
+    }
+    @keyframes anime08_pulse {
+      0%   {
+        -webkit-transform: scale(0.8);
+        transform: scale(0.8);
+      }
+      70%  {
+        -webkit-transform: scale(1);
+        transform: scale(1);
+        -webkit-box-shadow: 0 0 0 50px rgba(233,30,99, 0);
+        box-shadow: 0 0 0 50px rgba(233,30,99, 0);
+      }
+      100% {
+        -webkit-transform: scale(0.8);
+        transform: scale(0.8);
+        -webkit-box-shadow: 0 0 0 0 rgba(233,30,99, 0);
+        box-shadow: 0 0 0 0 rgba(233,30,99, 0);
+      }
+    }
+  }
+}
+
+
+@media screen and (min-width: 768px) {
+  .tracking-in-expand {
+    font-size: 50px;
+  }
+  #draw-btn {
+    font-size: 52px;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .tracking-in-expand {
+    font-size: 35px;
+  }
+  #draw-btn {
+    font-size: 37px;
+  }
+}
