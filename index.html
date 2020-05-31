@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <!-- Stylesheet CSS -->
+  <link rel="stylesheet" href="css/style.css">
+  <title>おみくじ</title>
+</head>
+<body>
+  <div class="inner">
+    <h1 class="tracking-in-expand">おみくじアプリ</h1>
+    <div id="overlay" class="hidden">
+      <img src="img/omikuji.png" alt="おみくじのイラスト" id="img-wrapper">
+    </div><!-- /#overlay /.hidden -->
+    <div class="top-img">
+      <img src="img/omikuji-torii.png" alt="鳥居のイラストの前におみくじのイラストが重なっている" id="fade-in">
+    </div><!-- /.top-img -->
+    <div class="btn-wrapper">
+      <button id="draw-btn" class="draw-btn" type=“button”>占う</button>
+    </div><!-- /.btn-wrapper -->
+  </div><!-- /.inner -->
+  <script src="js/main.js"></script>
+  <script>
+    'use strict'
+    // 「占う」ボタンクリック時に発動
+    draw_btn.addEventListener('click', function () {
+        draw_btn.classList.remove('draw-btn');
+        overlay.classList.remove('hidden');
+        img_wrapper.classList.add('rotate');
+        setTimeout(function () {
+          location.href = "result.html";
+        }, 2000);
+      });
+  </script>
+</body>
+</html>
