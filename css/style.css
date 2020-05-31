@@ -232,6 +232,7 @@ input, textarea, a {
   font-size: 35px;
   font-weight: bold;
   text-align: center;
+  color: #333333;
 }
 
 .result-head #result-txt {
@@ -295,6 +296,7 @@ input, textarea, a {
   width: 100%;
   height: auto;
   text-align: center;
+  color: #333333;
 }
 
 .result-block .cp_arrows_txt, .result-block #result-block_spot, .result-block #result-block_color {
@@ -365,6 +367,7 @@ input, textarea, a {
 .result-btn-wrapper p {
   font-size: 35px;
   margin: 8px 10px;
+  color: #333333;
 }
 
 .result-btn-wrapper .top-pg_btn {
