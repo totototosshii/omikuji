@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+  <!-- Stylesheet CSS -->
+  <link rel="stylesheet" href="css/style.css">
+  <!-- Google Font -->
+  <link href="https://fonts.googleapis.com/css?family=Zhi+Mang+Xing&display=swap" rel="stylesheet">
+  <title>おみくじ</title>
+</head>
+<body>
+  <div class="inner">
+    <h2 class="result-head">今日のあなたの運勢は<br class="d-sm-none"><span id="result-txt"></span>です！</h2>
+    <div id="overlay" class="hidden">
+      <img src="img/omikuji.png" alt="おみくじのイラスト" id="img-wrapper">
+    </div><!-- /#overlay /.hidden -->
+    <div class="result-block">
+      <div id="fade-in"></div>
+      <div class="group">
+        <div class="item">
+          <p class="cp_arrows_txt">ラッキースポット</p>
+          <div class="cp_arrows">
+            <div class="cp_arrow cp_bounce"></div>
+          </div><!-- /.cp_arrows -->
+          <p id="result-block_spot"></p>
+        </div><!-- /.item -->
+        <div class="item">
+          <p class="cp_arrows_txt">ラッキーカラー</p>
+          <div class="cp_arrows">
+            <div class="cp_arrow cp_bounce"></div>
+          </div><!-- /.cp_arrows -->
+          <p id="result-block_color"></p>
+        </div><!-- /.item -->
+      </div><!-- /.group -->
+    </div><!-- /.result-block -->
+    <div class="result-btn-wrapper">
+      <button id="once-again-draw_btn">もう一度引く</button>
+      <p>or</p>
+      <button class="top-pg_btn" type="button" onclick="location.href='index.html'">TOPページに戻る</button>
+    </div><!-- /.result-btn-wrapper -->
+  </div><!-- /.inner -->
+  <script src="js/main.js"></script>
+  <script>
+    'use strict'
+    // 「占う」ボタンクリック後、リンク先ページの読み込み完了時に発動
+    window.onload = result();
+
+    // 「もう一度引く」ボタンクリック時に発動
+    once_again_draw_btn.addEventListener('click', function () {
+        overlay.classList.remove('hidden');
+        img_wrapper.classList.add('rotate');
+        setTimeout(function () {
+          location.reload(false);
+          document.body.scrollTop = document.documentElement.scrollTop = 0;
+        }, 2000);
+      });
+  </script>
+</body>
+</html>
