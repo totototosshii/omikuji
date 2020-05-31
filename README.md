@@ -13,4 +13,4 @@
 ### 使用言語
 HTML、CSS(scss)、Bootstrap、JavaScript
 
-### [→実際のサイト](https://totototosshii.github.io/omikuji)
+### [→実際のサイト](https://github.com/totototosshii/omikuji)
