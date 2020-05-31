@@ -1,0 +1,86 @@
+/* リセットCSS */
+html, body, main, h1, h2, h3, h4, ul, ol, dl, li, dt, dd,
+p, div, span, img, a, table, tr, th, td, button {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-weight: normal;
+  font-size: 100%;
+  vertical-align:baseline;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+article, header, footer, aside, figure, figcaption, nav, section {
+  display:block;
+}
+
+body {
+  line-height: 1;
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+  user-select: none;
+}
+
+ul, ol {
+  list-style: none;
+}
+
+img {
+  border: none;
+  height: auto;
+  max-width: 100%;
+}
+
+button:hover, button:focus,
+input, textarea, a {
+  outline: none;
+}
+/* リセットCSS ここまで*/
+
+@import "top";
+@import "result";
+
+/* 共通スタイル*/
+body {
+  background-image: url(../img/top-bg-img.jpg);
+  font-family:  "Hiragino Kaku Gothic ProN", "Hiragino Kaku Gothic Pro", "Noto Sans Japanese", sans-serif;
+  .inner {
+    width: 980px;
+    max-width: 100%;
+    margin: 0 auto 100px;
+    #fade-in {
+      max-width: 100%;
+      height: auto;
+      display: block;
+      margin: 0 auto;
+      -webkit-animation: fade-in-bottom 1.5s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
+      animation: fade-in-bottom 1.5s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
+      @-webkit-keyframes fade-in-bottom {
+        0% {
+          -webkit-transform: translateY(50px);
+                  transform: translateY(50px);
+          opacity: 0;
+        }
+        100% {
+          -webkit-transform: translateY(0);
+                  transform: translateY(0);
+          opacity: 1;
+        }
+      }
+      @keyframes fade-in-bottom {
+        0% {
+          -webkit-transform: translateY(50px);
+                  transform: translateY(50px);
+          opacity: 0;
+        }
+        100% {
+          -webkit-transform: translateY(0);
+                  transform: translateY(0);
+          opacity: 1;
+        }
+      }
+    }
+  }
+}
