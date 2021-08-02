@@ -41,7 +41,53 @@ input, textarea, a {
   outline: none;
 }
 
-/* リセットCSS ここまで*/
+/* 共通スタイル*/
+body {
+  background-image: url(../img/top-bg-img.jpg);
+  font-family: "Hiragino Kaku Gothic ProN", "Hiragino Kaku Gothic Pro", "Noto Sans Japanese", sans-serif;
+}
+
+body .inner {
+  width: 980px;
+  max-width: 100%;
+  margin: 0 auto 100px;
+}
+
+body .inner #fade-in {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+  -webkit-animation: fade-in-bottom 1.5s cubic-bezier(0.39, 0.575, 0.565, 1) both;
+  animation: fade-in-bottom 1.5s cubic-bezier(0.39, 0.575, 0.565, 1) both;
+}
+
+@-webkit-keyframes fade-in-bottom {
+  0% {
+    -webkit-transform: translateY(50px);
+    transform: translateY(50px);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes fade-in-bottom {
+  0% {
+    -webkit-transform: translateY(50px);
+    transform: translateY(50px);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
 #overlay {
   position: fixed;
   top: 0;
@@ -458,10 +504,8 @@ input, textarea, a {
   -webkit-transition: all 0.3s ease-in-out;
   transition: all 0.3s ease-in-out;
   -webkit-transform: translate(-50%, -50%) rotateZ(-60deg);
-  -ms-transform: translate(-50%, -50%) rotate(-60deg);
-      transform: translate(-50%, -50%) rotateZ(-60deg);
+  transform: translate(-50%, -50%) rotateZ(-60deg);
   -webkit-transform-origin: bottom right;
-      -ms-transform-origin: bottom right;
           transform-origin: bottom right;
   border-radius: 10px;
   background: #12a3a8;
@@ -469,11 +513,9 @@ input, textarea, a {
 
 .cp_arrows .cp_arrow::after {
   -webkit-transform: translate(-50%, -50%) rotateZ(60deg);
-  -ms-transform: translate(-50%, -50%) rotate(60deg);
-      transform: translate(-50%, -50%) rotateZ(60deg);
+  transform: translate(-50%, -50%) rotateZ(60deg);
   -webkit-transform-origin: bottom left;
-  -ms-transform-origin: bottom left;
-      transform-origin: bottom left;
+  transform-origin: bottom left;
 }
 
 .cp_arrows .cp_bounce {
@@ -569,53 +611,6 @@ input, textarea, a {
   }
   .result-btn-wrapper .top-pg_btn {
     font-size: 20px;
-  }
-}
-
-/* 共通スタイル*/
-body {
-  background-image: url(../img/top-bg-img.jpg);
-  font-family: "Hiragino Kaku Gothic ProN", "Hiragino Kaku Gothic Pro", "Noto Sans Japanese", sans-serif;
-}
-
-body .inner {
-  width: 980px;
-  max-width: 100%;
-  margin: 0 auto 100px;
-}
-
-body .inner #fade-in {
-  max-width: 100%;
-  height: auto;
-  display: block;
-  margin: 0 auto;
-  -webkit-animation: fade-in-bottom 1.5s cubic-bezier(0.39, 0.575, 0.565, 1) both;
-  animation: fade-in-bottom 1.5s cubic-bezier(0.39, 0.575, 0.565, 1) both;
-}
-
-@-webkit-keyframes fade-in-bottom {
-  0% {
-    -webkit-transform: translateY(50px);
-    transform: translateY(50px);
-    opacity: 0;
-  }
-  100% {
-    -webkit-transform: translateY(0);
-    transform: translateY(0);
-    opacity: 1;
-  }
-}
-
-@keyframes fade-in-bottom {
-  0% {
-    -webkit-transform: translateY(50px);
-    transform: translateY(50px);
-    opacity: 0;
-  }
-  100% {
-    -webkit-transform: translateY(0);
-    transform: translateY(0);
-    opacity: 1;
   }
 }
 /*# sourceMappingURL=style.css.map */
